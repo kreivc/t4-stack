@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "3072fc10-8a94-479f-a086-2d794025dc2b"
+      }
+    },
+    "owner": "kreivc",
+    "slug": "finance-tracker",
+    "android": {
+      "package": "com.kreivc.financetracker"
+    },
+    "ios": {
+      "bundleIdentifier": "com.kreivc.financetracker"
+    }
+  }
+}
