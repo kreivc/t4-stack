@@ -9,7 +9,8 @@ export function getLocalhost() {
     return localhost
   }
   const debuggerHost = Constants.expoConfig?.hostUri
-  localhost = debuggerHost?.split(':')[0] ?? 'localhost'
+  // localhost = debuggerHost?.split(':')[0] ?? 'localhost'
+  localhost = 'localhost'
   return localhost
 }
 

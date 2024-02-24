@@ -1,9 +1,10 @@
 import { FlashList } from '@shopify/flash-list'
 import { useCallback } from 'react'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import { Car } from '@t4/api/src/db/schema'
 
 interface Props {
-  data: any[]
+  data?: Car[]
   renderItem: (item: any) => React.ReactElement
   itemHeight: number
 }
@@ -17,6 +18,10 @@ export function VirtualList<T>({ data, renderItem, itemHeight }: Props): React.R
     },
     [renderItem]
   )
+
+  if (!data) {
+    return null
+  }
 
   return (
     <FlashList

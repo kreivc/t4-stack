@@ -18,7 +18,7 @@ export const VirtualizedListScreen = (): React.ReactNode => {
     ))
     .with(empty, () => <Paragraph>No cars found.</Paragraph>)
     .with(success, () => (
-      <VirtualList data={carsList.data as any[]} renderItem={CarListItem} itemHeight={80} />
+      <VirtualList data={carsList.data} renderItem={CarListItem} itemHeight={80} />
     ))
     .otherwise(() => <CarListError message={carsList.failureReason?.message} />)
 
